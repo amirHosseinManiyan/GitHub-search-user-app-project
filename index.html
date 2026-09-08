@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>GitHub User Search</title>
    <link rel="icon" href="assets/favicon-32x32.png">
+
+   <script>
+      const savedTheme = localStorage.getItem("theme");
+      const html = document.documentElement;
+      if (savedTheme === "dark") {
+         html.dataset.theme = "dark";
+      } else {
+         html.dataset.theme = "light";
+      }
+   </script>
+
    <link rel="stylesheet" href="style.css">
 </head>
 <body>

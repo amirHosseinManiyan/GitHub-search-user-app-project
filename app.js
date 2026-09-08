@@ -1,7 +1,7 @@
 const html = document.documentElement;
 const themeIcon = document.querySelector(".theme-icon");
 const themeLabel = document.querySelector(".theme-label");
-let currentTheme = html.dataset.theme;
+const currentTheme = html.dataset.theme;
 
 function changeTheme(newTheme) {
    html.dataset.theme = newTheme;
@@ -15,12 +15,7 @@ function changeTheme(newTheme) {
    }
 }
 
-let savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light" || savedTheme === null) {
-   changeTheme("light");
-} else if (savedTheme === "dark") {
-   changeTheme("dark");
-}
+changeTheme(currentTheme);
 
 themeIcon.addEventListener("click", function() {
    if (currentTheme === "light") {
