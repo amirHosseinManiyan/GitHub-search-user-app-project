@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>GitHub User Search</title>
+   <link rel="icon" href="assets/favicon-32x32.png">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="header">
+      <h1 class="logo">devfinder</h1>
+      <div class="theme-toggle">
+         <p class="theme-label">DARK</p>
+         <img class="theme-icon" src="assets/icon-moon.svg" alt="theme icon">
+      </div>
+   </header>
+
+   <main class="main">
+      <article class="search-box">
+         <img class="search-icon" src="assets/icon-search.svg" alt="search icon">
+         <input class="search-input" type="search" name="username" id="username" placeholder="Search GitHub Username...">
+         <button class="search-button">Search</button>
+         <p class="search-error">User not found</p>
+      </article>
+
+      <aside class="profile-card">
+         <section class="profile-header">
+            <img class="profile-avatar" src="assets/octocat.png" alt="GitHub profile avatar" title="avatar">
+            <div class="profile-info">
+               <h2 class="profile-name" title="name">The Octocat</h2>
+               <a class="profile-username" href="https://github.com/octocat" target="_blank" title="username">@octocat</a>
+               <p class="profile-joined" title="joined">Joined 25 Jan 2011</p>
+            </div>
+         </section>
+
+         <section class="profile-bio">
+            This profile has no bio
+         </section>
+
+         <section class="profile-stats">
+            <div class="profile-stat">
+               <h4 class="stat-title">Repos</h4>
+               <p class="stat-value">8</p>
+            </div>
+
+            <div class="profile-stat">
+               <h4 class="stat-title">Followers</h4>
+               <p class="stat-value">3938</p>
+            </div>
+
+            <div class="profile-stat">
+               <h4 class="stat-title">Following</h4>
+               <p class="stat-value">9</p>
+            </div>
+         </section>
+
+         <section class="profile-links">
+            <div class="profile-link">
+               <img src="assets/icon-location.svg" alt="location" title="location">
+               <p class="profile-link-text">San Francisco</p>
+            </div>
+
+            <div class="profile-link">
+               <img src="assets/icon-website.svg" alt="website" title="website">
+               <a class="profile-link-text" href="https://github.blog" target="_blank">github.blog</a>
+            </div>
+
+            <div class="profile-link">
+               <img src="assets/icon-twitter.svg" alt="twitter" title="twitter">
+               <a class="profile-link-text" href="#" target="_blank">Not available</a>
+            </div>
+
+            <div class="profile-link">
+               <img src="assets/icon-company.svg" alt="company" title="company">
+               <a class="profile-link-text" href="https://github.com/github" target="_blank">@github</a>
+            </div>
+         </section>
+      </aside>
+   </main>
+
+   <script src="app.js"></script>
+</body>
+</html>

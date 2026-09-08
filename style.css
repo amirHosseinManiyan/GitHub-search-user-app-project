@@ -1,0 +1,234 @@
+@font-face {
+   font-family: "Space Mono";
+   src: url("fonts/SpaceMono-Regular.ttf");
+}
+
+:root {
+   --body-bg-color:  rgb(245,247,255);
+   --logo-color: rgb(50, 90, 130);
+   --theme-label: rgba(50, 90, 130, 1);
+   --bg-content: rgb(255,255,255);
+   --search-text-color: rgb(79, 79, 79);
+   --name-color: black;
+   --text-color: rgb(75, 105, 155);
+   --bio-color: rgb(75, 105, 155);
+   --bg-stats: rgb(245,247,255);
+}
+
+[data-theme="dark"] {
+   --body-bg-color:  rgb(20,29,46);
+   --logo-color: rgb(255, 255, 255);
+   --theme-label: rgb(255, 255, 255);
+   --bg-content: rgb(30,43,72);
+   --search-text-color: rgb(255, 255, 255);
+   --name-color: white;
+   --text-color: rgb(255, 255, 255);
+   --bio-color: rgba(255, 255, 255, 0.7);
+   --bg-stats: rgb(20,29,46);
+}
+
+*, *::before, *::after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Space Mono" ,monospace;
+}
+
+a {
+   text-decoration: none;
+}
+
+body, html {
+   min-width: 320px;
+}
+
+body {
+   padding: 3rem 1rem;
+   background-color: var(--body-bg-color);
+   transition: background-color 1s ease;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+}
+
+.logo {
+   color: var(--logo-color);
+   font-size: 2rem;
+   transition: color 1s ease;
+}
+
+.theme-toggle {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.theme-label {
+   font-size: 1rem;
+   color: var(--theme-label);
+   transition: color 1s ease;
+}
+
+.theme-icon:hover {
+   cursor: pointer;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   margin-top: 1rem;
+}
+
+.search-box {
+   background-color: var(--bg-content);
+   box-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
+   padding: 0.5rem 0.5rem 0.5rem 1rem;
+   display: grid;
+   grid-template-columns: 25px 3fr 1fr;
+   align-items: center;
+   gap: 0.5rem;
+   border-radius: 10px;
+   position: relative;
+   transition: background-color 1s ease;
+}
+
+.search-input {
+   border: none;
+   outline: none;
+   font-size: 0.8rem;
+   font-weight: 600;
+   color: var(--search-text-color);
+   background-color: inherit;
+   transition: color 1s ease;
+}
+
+.search-button {
+   border: none;
+   background-color: rgb(0, 119, 255);
+   color: rgb(255, 255, 255);
+   font-size: 1rem;
+   font-weight: 700;
+   height: 2.5rem;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.search-button:hover {
+   background-color: rgb(15, 100, 200);
+}
+
+.search-error {
+   display: none;
+   position: absolute;
+   color: red;
+   font-size: 0.8rem;
+   font-weight: 700;
+   right: 0;
+   top: -1.5rem;
+}
+
+.profile-card {
+   box-shadow: 0px 16px 30px -10px rgba(69, 94, 186, 0.2);
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   background-color: var(--bg-content);
+   border-radius: 10px;
+   padding: 1rem;
+   transition: background-color 1s ease;
+}
+
+.profile-header {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.profile-avatar {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+}
+
+.profile-info {
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+}
+
+.profile-name {
+   font-size: 1.5rem;
+   color: var(--name-color);
+   transition: color 1s ease;
+}
+
+.profile-username {
+   font-size: 1rem;
+   color: rgb(30, 130, 250);
+}
+
+.profile-joined {
+   font-size: 1rem;
+   color: var(--text-color);
+   font-weight: 00;
+   transition: color 1s ease;
+}
+
+.profile-bio {
+   font-size: 1rem;
+   font-weight: 500;
+   color: var(--bio-color);
+   transition: color 1s ease;
+}
+
+.profile-stats {
+   background-color: var(--bg-stats);
+   padding: 1rem 0;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-evenly;
+   gap: 1rem;
+   transition: background-color 1s ease;
+}
+
+.profile-stat {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.stat-title {
+   font-size: 0.9rem;
+   color: var(--text-color);
+   font-weight: 500;
+   transition: color 1s ease;
+}
+
+.stat-value {
+   color: var(--name-color);
+   font-size: 1.2rem;
+   font-weight: 600;
+   transition: color 1s ease;
+}
+
+.profile-links {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(4, 1fr);
+   gap: 1rem;
+}
+
+.profile-link {
+   display: flex;
+   gap: 1rem;
+}
+
+.profile-link-text {
+   font-size: 1rem;
+   color: var(--text-color);
+   transition: color 1s ease;
+}
