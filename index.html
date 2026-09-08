@@ -29,9 +29,9 @@
    <main class="main">
       <article class="search-box">
          <img class="search-icon" src="assets/icon-search.svg" alt="search icon">
-         <input class="search-input" type="search" name="username" id="username" placeholder="Search GitHub Username...">
-         <button class="search-button">Search</button>
-         <p class="search-error">User not found</p>
+         <input class="search-input" id="search-input" type="search" name="username" id="username" placeholder="Search GitHub Username...">
+         <button class="search-button" id="search-button">Search</button>
+         <p class="search-error" id="search-error">User not found</p>
       </article>
 
       <aside class="profile-card">
@@ -44,46 +44,46 @@
             </div>
          </section>
 
-         <section class="profile-bio">
+         <section class="profile-bio" title="bio">
             This profile has no bio
          </section>
 
          <section class="profile-stats">
             <div class="profile-stat">
                <h4 class="stat-title">Repos</h4>
-               <p class="stat-value">8</p>
+               <p class="stat-value repos">8</p>
             </div>
 
             <div class="profile-stat">
                <h4 class="stat-title">Followers</h4>
-               <p class="stat-value">23988</p>
+               <p class="stat-value followers">23988</p>
             </div>
 
             <div class="profile-stat">
                <h4 class="stat-title">Following</h4>
-               <p class="stat-value">9</p>
+               <p class="stat-value following">9</p>
             </div>
          </section>
 
          <section class="profile-links">
             <div class="profile-link">
                <img src="assets/icon-location.svg" alt="location" title="location">
-               <p class="profile-link-text">San Francisco</p>
+               <p class="profile-link-text location">San Francisco</p>
             </div>
 
             <div class="profile-link">
                <img src="assets/icon-website.svg" alt="website" title="website">
-               <a class="profile-link-text" href="https://github.blog" target="_blank">github.blog</a>
+               <a class="profile-link-text blog" href="https://github.blog" target="_blank">github.blog</a>
             </div>
 
             <div class="profile-link">
                <img src="assets/icon-twitter.svg" alt="twitter" title="twitter">
-               <a class="profile-link-text" href="#" target="_blank">Not available</a>
+               <a class="profile-link-text twitter" href="#" target="_blank">Not available</a>
             </div>
 
             <div class="profile-link">
                <img src="assets/icon-company.svg" alt="company" title="company">
-               <a class="profile-link-text" href="https://github.com/github" target="_blank">@github</a>
+               <a class="profile-link-text company" href="https://github.com/github" target="_blank">@github</a>
             </div>
          </section>
       </aside>

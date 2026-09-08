@@ -128,7 +128,11 @@ body {
    font-size: 0.8rem;
    font-weight: 700;
    right: 0;
-   top: -1.5rem;
+   top: -1.1rem;
+}
+
+.search-error-show {
+   display: block;
 }
 
 .profile-card {
@@ -290,6 +294,7 @@ body {
 
    .profile-header {
       gap: 3rem;
+      align-items: center;
    }
 
    .profile-avatar {
@@ -352,23 +357,30 @@ body {
 
    .profile-header {
       gap: 2rem;
+      align-items: center;
    }
 
    .profile-info {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
       width: 100%;
+      grid-template-areas:
+      "name joined"
+      "username .";
+   }
+
+   .profile-name {
+      grid-area: name;
+      align-self: center;
    }
 
    .profile-username {
-      grid-column-start: 1;
+      grid-area: username;
    }
 
    .profile-joined {
-      grid-column-start: 2;
-      grid-row-start: 1;
+      grid-area: joined;
       align-self: center;
-      justify-self: center;
    }
 }
