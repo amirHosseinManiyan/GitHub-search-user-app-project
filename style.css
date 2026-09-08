@@ -290,6 +290,7 @@ body {
 
    .search-error {
       font-size: 1rem;
+      top: -1.5rem;
    }
 
    .profile-header {
@@ -353,6 +354,10 @@ body {
 @media (min-width: 1024px) {
    .header, .main {
       width: 850px;
+   }
+
+   .search-error {
+      top: -1.7rem;
    }
 
    .profile-header {

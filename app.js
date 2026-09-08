@@ -31,13 +31,13 @@ const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const searchError = document.getElementById("search-error");
 
-function showError(message, time) {
+function showError(message,) {
    searchError.textContent = message;
    searchError.classList.add("search-error-show");
 
    setTimeout(() => {
       searchError.classList.remove("search-error-show");
-   }, time);
+   }, 3000);
 }
 
 function formatJoinedDate(dateString) {
@@ -138,9 +138,9 @@ searchButton.addEventListener("click", async function() {
    const usernameRegex = /^[a-zA-Z0-9-]+$/;
 
    if (enteredUsername === "") {
-      showError("Please enter a GitHub username", 2000);
+      showError("Please enter a GitHub username");
    } else if (!usernameRegex.test(enteredUsername)) {
-      showError("Invalid format. Use letters, numbers, hyphens", 3000);
+      showError("Invalid format. Use letters, numbers, hyphens");
    } else {
       const apiUrl = `https://api.github.com/users/${enteredUsername}`;
       try {
@@ -149,12 +149,12 @@ searchButton.addEventListener("click", async function() {
             const userData = await response.json();
             renderUser(userData);
          } else if (response.status === 404) {
-            showError("User not found", 3000);
+            showError("User not found");
          } else {
-            showError("Something went wrong. Please try again", 3000);
+            showError("Something went wrong. Please try again");
          }
       } catch (error) {
-         showError("Network error. Please try again", 3000);
+         showError("Network error. Please try again");
       }
    }
 });
