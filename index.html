@@ -8,11 +8,10 @@
 
    <script>
       const savedTheme = localStorage.getItem("theme");
-      const html = document.documentElement;
       if (savedTheme === "dark") {
-         html.dataset.theme = "dark";
+         document.documentElement.dataset.theme = "dark";
       } else {
-         html.dataset.theme = "light";
+         document.documentElement.dataset.theme = "light";
       }
    </script>
 
@@ -57,7 +56,7 @@
 
             <div class="profile-stat">
                <h4 class="stat-title">Followers</h4>
-               <p class="stat-value">3938</p>
+               <p class="stat-value">23988</p>
             </div>
 
             <div class="profile-stat">

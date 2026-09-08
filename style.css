@@ -191,7 +191,6 @@ body {
    border-radius: 10px;
    display: flex;
    justify-content: space-evenly;
-   gap: 1rem;
    transition: background-color 1s ease;
 }
 
@@ -222,6 +221,11 @@ body {
    gap: 1rem;
 }
 
+.profile-links img {
+   width: 20px;
+   height: 20px;
+}
+
 .profile-link {
    display: flex;
    gap: 1rem;
@@ -231,4 +235,140 @@ body {
    font-size: 1rem;
    color: var(--text-color);
    transition: color 1s ease;
+}
+
+@media (min-width: 768px) {
+   body {
+      padding: 5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .header, .main {
+      width: 736px;
+   }
+
+   .logo {
+      font-size: 3rem;
+   }
+
+   .theme-toggle {
+      gap: 1rem;
+   }
+
+   .theme-icon {
+      width: 30px;
+   }
+
+   .theme-label {
+      font-size: 1.5rem;
+   }
+
+   .main {
+      gap: 2rem;
+      margin-top: 1.5rem;
+   }
+
+   .search-box {
+      padding: 0.8rem 0.8rem 0.8rem 1rem;
+      grid-template-columns: 25px 4fr 1fr;
+      gap: 1rem;
+   }
+
+   .search-input {
+      font-size: 1rem;
+   }
+
+   .search-button {
+      font-size: 1.2rem;
+   }
+
+   .search-error {
+      font-size: 1rem;
+   }
+
+   .profile-header {
+      gap: 3rem;
+   }
+
+   .profile-avatar {
+      width: 100px;
+      height: 100px;
+   }
+
+   .profile-info {
+      gap: 0.3rem;
+   }
+
+   .profile-name {
+      font-size: 2rem;
+   }
+
+   .profile-username {
+      font-size: 1.5rem;
+   }
+
+   .profile-joined {
+      font-size: 1.3rem;
+   }
+
+   .profile-bio {
+      font-size: 1.3rem;
+   }
+
+   .profile-stat {
+      gap: 1rem;
+   }
+
+   .stat-title {
+      font-size: 1.3rem;
+   }
+
+   .stat-value {
+      font-size: 1.5rem;
+   }
+
+   .profile-links {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.5rem;
+      grid-auto-flow: column;
+   }
+
+   .profile-link {
+      gap: 1.3rem;
+   }
+
+   .profile-link-text {
+      font-size: 1.3rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .header, .main {
+      width: 850px;
+   }
+
+   .profile-header {
+      gap: 2rem;
+   }
+
+   .profile-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 100%;
+   }
+
+   .profile-username {
+      grid-column-start: 1;
+   }
+
+   .profile-joined {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      align-self: center;
+      justify-self: center;
+   }
 }

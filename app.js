@@ -1,7 +1,7 @@
 const html = document.documentElement;
 const themeIcon = document.querySelector(".theme-icon");
 const themeLabel = document.querySelector(".theme-label");
-const currentTheme = html.dataset.theme;
+let currentTheme = html.dataset.theme;
 
 function changeTheme(newTheme) {
    html.dataset.theme = newTheme;
